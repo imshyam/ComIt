@@ -7,6 +7,7 @@ home = expanduser("~")
 runpyAtHome=home+'/run.py'
 if os.path.isfile(runpyAtHome)==False:
 	os.system("cp run.py ~/")
+	os.system("echo '\nCopied.\n'")
 else:
 	os.system("echo '\nrun.py Already Exists At Home.\n'")
 
