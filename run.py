@@ -1,19 +1,24 @@
 import requests
 import json
 import sys
+import os.path
 
 # constants
 RUN_URL = u'http://api.hackerearth.com/code/run/'
 
 CLIENT_SECRET = '807834b1529d46b54b22f7427156bf95562db4df'
 
-filename=sys.argv[1]
-source = open(filename, 'r')
-language=filename.rsplit('.',1)[1]
+
+#taking file input
 #supported languages:
 #C C++ Clojure Haskell C# Java Objective-C Perl PHP Python ruby
 #C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
+filename=sys.argv[1]
+source = open(filename, 'r')
+language=filename.rsplit('.',1)[1]
 
+
+#decide language
 if language.upper()=="C"  or language.upper()=="H":#.c .h
 	lang="C"
 	print "\nLanguage Detected : ",lang,"\n"
@@ -48,9 +53,19 @@ else:
 	print "This Is Not A Compitible Language.\n"
 	print "Extention Detected : ",language.upper(),"\n"
 	sys.exit()
-print "provide input (if needed) : "
-inp=raw_input()
+
+#taking input
+if len(sys.argv)<=2:
+	print "No Input Provided."
+	inp=""
+else:
+	print "provided input : "
+	input_file_name=sys.argv[2]
+	inp= open(input_file_name, 'r').read()
+	print inp
 print
+
+#data to be sent
 data = {
 	'input' : inp,
     'client_secret': CLIENT_SECRET,
@@ -70,6 +85,10 @@ payload= r.json()
 run_status = payload.get('run_status')
 o = run_status['output']
 web=payload.get('web_link')
-print "output:"
-print "\t",o
+time=run_status['time_used']
+memory=run_status['memory_used']
+print "output : "
+print "\n",o
+print "Memory Used : ",memory,"\n"
+print "Time Taken : ",time,"\n"
 print "Web Link For Code : ",web,"\n"
