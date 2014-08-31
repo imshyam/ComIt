@@ -18,7 +18,7 @@ if 'comit' in open(filename).read():
 #else Create a command
 else:
 	f=open(filename,'a')
-	f.write("\nalias comit='python ~/run.py $1 $2'")
+	f.write("\nif [ -z \"$2\" ]; then alias comit='python ~/run.py $1'; else alias comit='python ~/run.py $1 $2'; fi")
 	f.close()
 	os.system(". ~/.bashrc")
 	os.system("echo '\nDone With All Tasks.\n'")
