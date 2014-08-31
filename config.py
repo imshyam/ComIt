@@ -21,3 +21,4 @@ else:
 	f.write("\nalias comit='python ~/run.py $1 $2'")
 	f.close()
 	os.system(". ~/.bashrc")
+	os.system("echo '\nDone With All Tasks.\n'")
