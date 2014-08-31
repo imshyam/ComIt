@@ -2,5 +2,7 @@
 using namespace std;
 int main()
 {
-	cout<<"output is this."<<endl;
+	int n,m;
+	cin>>n>>m;
+	cout<<"n+m is : "<<n+m<<endl;
 }

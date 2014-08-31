@@ -19,14 +19,14 @@ if language.upper()=="C"  or language.upper()=="H":#.c .h
 	print "\nLanguage Detected : ",lang,"\n"
 elif language.upper()=="CPP" or language.upper()=="CC" or language.upper()=="CXX" or language.upper()=="C++" or language.upper()=="H" or language.upper()=="HH":#.cc .cpp .cxx .c++ .h .hh 
 	lang="CPP"
-	print "\nLanguage Detected : ",lang "or CPP11","\n"
+	print "\nLanguage Detected : ",lang ," or CPP11","\n"
 elif language.upper()=="PY" or language.upper()=="PYW" or language.upper()=="PYC" or language.upper()=="PYO" or language.upper()=="PYD":#.py .pyw, .pyc, .pyo, .pyd
 	lang="PYTHON"
 	print "\nLanguage Detected : ",lang,"\n"
 elif language.upper()=="CLJ" or language.upper()=="EDN":#.clj .edn
 	lang="CLOJURE"
 	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="JAVA" language.upper()=="CLASS" or language.upper()=="JAR":#.java .class .jar
+elif language.upper()=="JAVA" or language.upper()=="CLASS" or language.upper()=="JAR":#.java .class .jar
 	lang="JAVA"
 	print "\nLanguage Detected : ",lang,"\n"
 elif language.upper()=="RB" or language.upper()=="RBW":#.rb .rbw
@@ -48,8 +48,11 @@ else:
 	print "This Is Not A Compitible Language.\n"
 	print "Extention Detected : ",language.upper(),"\n"
 	sys.exit()
-
+print "provide input (if needed) : "
+inp=raw_input()
+print
 data = {
+	'input' : inp,
     'client_secret': CLIENT_SECRET,
     'async': 0,
     'source': source.read(),
