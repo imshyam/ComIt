@@ -39,7 +39,7 @@ Usage
 ----
 
 ```sh
-comit 'Name Of To Run' 'Input File Name'
+comit 'Name Of To File Run' 'Input File Name'
 ```
 for exapmle :
 (in this example i'm writing all permutations of 12 and 123 in increasing order.) 
