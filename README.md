@@ -48,7 +48,7 @@ Ctrl+Alt+t
 cd ComIt
 comit test.py input.text
 ```
-Langeage Support
+Language Support
 ------
 all supportes languages till now are:
 
