@@ -40,7 +40,7 @@ Usage
 
 ```sh
 comit 'Name of file containing code with location' 'Input File Name with location'
-#Location is required if the file is another folder
+#Location is required if the file is in another folder
 #No need to provide input file name if there is no input
 ```
 for exapmle :
