@@ -3,8 +3,8 @@ import os.path
 from os.path import expanduser
 
 home = expanduser("~")
-#copy run.py to home folder
-runpyAtHome=home+'/run.py'
+#copy runWithoutRequests.py to home folder
+runpyAtHome=home+'/runWithoutRequests.py'
 if os.path.isfile(runpyAtHome)==False:
 	os.system("cp runWithoutRequests.py ~/")
 	os.system("echo '\nDone.\n'")
