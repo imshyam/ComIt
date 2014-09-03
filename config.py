@@ -6,8 +6,8 @@ home = expanduser("~")
 #copy run.py to home folder
 runpyAtHome=home+'/run.py'
 if os.path.isfile(runpyAtHome)==False:
-	os.system("cp run.py ~/")
-	os.system("echo '\nCopied.\n'")
+	os.system("cp runWithoutRequests.py ~/")
+	os.system("echo '\nDone.\n'")
 else:
 	os.system("echo '\nrun.py Already Exists At Home.\n'")
 
@@ -19,7 +19,7 @@ if 'comit' in open(filename).read():
 #else Create a command
 else:
 	f=open(filename,'a')
-	f.write("\nif [ -z \"$2\" ]; then alias comit='python ~/run.py $1'; else alias comit='python ~/run.py $1 $2'; fi")
+	f.write("\nif [ -z \"$2\" ]; then alias comit='python ~/runWithoutRequests.py $1'; else alias comit='python ~/runWithoutRequests.py $1 $2'; fi")
 	f.close()
 	os.system(". ~/.bashrc")
 	os.system("echo '\nDone With All Tasks.\n'")
