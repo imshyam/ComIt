@@ -68,7 +68,7 @@ all supportes languages till now are:
 
 License
 ----
-[Licensed] under
+[Licensed] under -
 
 The MIT License (MIT)
 
