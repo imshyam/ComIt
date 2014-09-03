@@ -66,6 +66,13 @@ all supportes languages till now are:
 * Haskell 
 * Clojure
 
+License
+----
+[Licensed] under
 
+The MIT License (MIT)
+
+**Free Software**
 
 [HackerEarthApi's]:http://developer.hackerearth.com/
+[Licensed]:https://github.com/iMshyam/ComIt/blob/master/LICENSE
