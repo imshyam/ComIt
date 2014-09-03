@@ -1,3 +1,8 @@
+"""
+:copyright: (c) 2014 by Shyam Sundar Choudhary.
+:license: The MIT License , see LICENSE for more details.
+"""
+import language
 import requests
 import json
 import sys
@@ -15,43 +20,16 @@ CLIENT_SECRET = '807834b1529d46b54b22f7427156bf95562db4df'
 #C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
 filename=sys.argv[1]
 source = open(filename, 'r')
-language=filename.rsplit('.',1)[1]
+langua=filename.rsplit('.',1)[1]
 
 
 #decide language
-if language.upper()=="C"  or language.upper()=="H":#.c .h
-	lang="C"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="CPP" or language.upper()=="CC" or language.upper()=="CXX" or language.upper()=="C++" or language.upper()=="H" or language.upper()=="HH":#.cc .cpp .cxx .c++ .h .hh 
-	lang="CPP"
-	print "\nLanguage Detected : ",lang ," or CPP11","\n"
-elif language.upper()=="PY" or language.upper()=="PYW" or language.upper()=="PYC" or language.upper()=="PYO" or language.upper()=="PYD":#.py .pyw, .pyc, .pyo, .pyd
-	lang="PYTHON"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="CLJ" or language.upper()=="EDN":#.clj .edn
-	lang="CLOJURE"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="JAVA" or language.upper()=="CLASS" or language.upper()=="JAR":#.java .class .jar
-	lang="JAVA"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="RB" or language.upper()=="RBW":#.rb .rbw
-	lang="RUBY"
-	print "\nLanguage Detected : ",lang,"\n"#.js
-elif language.upper()=="JS":
-	lang="JAVASCRIPT"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="HS" or language.upper()=="LHS":#.hl .hls
-	lang="HASKELL"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="PL" or language.upper()=="PM" or language.upper()=="T" or language.upper()=="POD" or language.upper()=="LHS":#.pl .pm .t .pod
-	lang="PERL"
-	print "\nLanguage Detected : ",lang,"\n"
-elif language.upper()=="PHP" or language.upper()=="PHTML" or language.upper()=="PHP4" or language.upper()=="PHP3" or language.upper()=="PHP5" or language.upper()=="PHPS":#.php, .phtml, .php4, .php3, .php5, .phps
-	lang="PHP"
+if langua in language.DetectedLanguage:
+	lang=language.DetectedLanguage[langua]
 	print "\nLanguage Detected : ",lang,"\n"
 else:
 	print "This Is Not A Compitible Language.\n"
-	print "Extention Detected : ",language.upper(),"\n"
+	print "Extention Detected : ",langua.upper(),"\n"
 	sys.exit()
 
 #taking input
