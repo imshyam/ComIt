@@ -1,0 +1,6 @@
+#regAlias
+regAlias.reg
+#alias
+alias.cmd
+#run.py (it uses requests)
+run.py
