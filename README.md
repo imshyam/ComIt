@@ -23,7 +23,7 @@ Ctrl+Alt+t(restart the terminal)
 ```
 Windows:
 ___
-install [Python] (if not installed)
+install [Python]
 
 if cmd doesn't understand python then you need to set environment variable 'python'
 
