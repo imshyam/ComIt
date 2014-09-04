@@ -7,6 +7,7 @@ home = expanduser("~")
 runpyAtHome=home+'/runWithoutRequests.py'
 if os.path.isfile(runpyAtHome)==False:
 	os.system("cp runWithoutRequests.py ~/")
+	os.system("cp language.py ~/")
 	os.system("echo '\nDone.\n'")
 else:
 	os.system("echo '\nrun.py Already Exists At Home.\n'")
