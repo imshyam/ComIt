@@ -25,6 +25,6 @@ if os.path.isfile("regAlias.reg") and os.path.getsize("regAlias.reg") == 0:
 #making dir to c:\windows\comit
 os.system("mkdir c:\Windows\ComIt")
 #coping from desktop to c:\Windows\ComIt
-os.system("copy %userprofile%\Desktop\ComIt\* c:\Windows\ComIt")
+os.system("copy %userprofile%\Downloads\ComIt-master\* c:\Windows\ComIt")
 #registring the command or making alias
 os.system("c:\\Windows\\ComIt\\regAlias.reg")
