@@ -14,6 +14,7 @@ Installation
 
 Linux :
 ___
+install git using : sudo apt-get install git
 ```sh
 git clone https://github.com/iMshyam/ComIt.git
 cd ComIt
