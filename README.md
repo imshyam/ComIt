@@ -8,23 +8,11 @@ ComIt (Compile It) is a online compiler made by using [HackerEarthApi's].
 
 
 
-Version
-----
-
-1.0
-
-Tech
------------
-
-ComIt uses :
-
-* python and
-* HackerEarth Api's
-
-    to work properly.
 
 Installation
 --------------
+____
+Linux :
 
 ```sh
 git clone https://github.com/iMshyam/ComIt.git
@@ -33,11 +21,21 @@ python config.py
 exit
 Ctrl+Alt+t(restart the terminal)
 ```
+Windows:
+```sh
+download zip
+right click on file and click on extract here
+open cmd as Admin
+paste it in cmd : cd %userprofile%\Downloads\ComIt-master\
+then run : python configWindows.py
+click on 'YES' when asked for adding Registry
+restart cmd(no need to open as Admin)
 
+```
 
 Usage
 ----
-
+(same for both windows and linux)
 ```sh
 comit 'Name of file containing code with location' 'Input File Name with location'
 #Location is required if the file is in another folder
@@ -49,7 +47,17 @@ for exapmle :
 Ctrl+Alt+t
 cd ComIt
 comit test.py input.text
+# or location of test.py and input.txt
 ```
+
+Version
+----
+
+2.0
+
+
+
+
 Language Support
 ------
 all supportes languages till now are:
@@ -65,7 +73,19 @@ all supportes languages till now are:
 * C#
 * Haskell 
 * Clojure
+ 
 
+
+Tech
+-----------
+
+ComIt uses :
+
+* python and
+* HackerEarth Api's
+
+    to work properly.
+    
 License
 ----
 [Licensed] under -
