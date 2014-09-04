@@ -1,5 +1,6 @@
 import os
 import os.path
+import mmap
 
 #--------------creating an Alias-------------
 
@@ -8,7 +9,9 @@ exist=os.path.isfile("alias.cmd")
 if not exist:
 	os.system("echo.>alias.cmd")
 aliasWrite=open("alias.cmd","r+")
-if os.path.isfile("alias.cmd") and os.path.getsize("alias.cmd") == 0:
+
+s = mmap.mmap(aliasWrite.fileno(), 0, access=mmap.ACCESS_READ)
+if s.find('doskey') == -1:
 	aliasWrite.write("doskey comit =python c:\Windows\ComIt\\runWithoutRequests.py $*")
 
 #regAlias.reg
@@ -16,7 +19,8 @@ exist=os.path.isfile("regAlias.reg")
 if not exist:
 	os.system("echo.>regAlias.reg")
 regAliasWrite=open("regAlias.reg","r+")
-if os.path.isfile("regAlias.reg") and os.path.getsize("regAlias.reg") == 0:
+s1 = mmap.mmap(regAliasWrite.fileno(), 0, access=mmap.ACCESS_READ)
+if s1.find('doskey') == -1:
 	regAliasWrite.write("""Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Command Processor]
