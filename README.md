@@ -11,9 +11,9 @@ ComIt (Compile It) is a online compiler made by using [HackerEarthApi's].
 
 Installation
 --------------
-____
-Linux :
 
+Linux :
+___
 ```sh
 git clone https://github.com/iMshyam/ComIt.git
 cd ComIt
@@ -22,9 +22,16 @@ exit
 Ctrl+Alt+t(restart the terminal)
 ```
 Windows:
+___
+install [Python] (if not installed)
+
+if cmd doesn't understand python then you need to set environment variable 'python'
+
+For setting environment variable open Windows Power-Shell and paste : [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27", "User")
+
+now download [this]
 ```sh
-download zip
-right click on file and click on extract here
+go to downloads and right click on "ComIt-master" and click on extract here
 open cmd as Admin
 paste it in cmd : cd %userprofile%\Downloads\ComIt-master\
 then run : python configWindows.py
@@ -95,4 +102,6 @@ The MIT License (MIT)
 **Free Software**
 
 [HackerEarthApi's]:http://developer.hackerearth.com/
+[Python]:https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
+[this]:https://github.com/iMshyam/ComIt/archive/master.zip
 [Licensed]:https://github.com/iMshyam/ComIt/blob/master/LICENSE
