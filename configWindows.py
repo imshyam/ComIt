@@ -29,6 +29,10 @@ if s1.find('doskey') == -1:
 #making dir to c:\windows\comit
 os.system("mkdir c:\Windows\ComIt")
 #coping from desktop to c:\Windows\ComIt
-os.system("copy %userprofile%\Downloads\ComIt-master\* c:\Windows\ComIt")
+current_dir=os.getcwd()
+copy_from=current_dir+"\*"
+command_to_copy="copy "+copy_from+" c:\Windows\ComIt"
+#os.system("copy %userprofile%\Downloads\ComIt-master\* c:\Windows\ComIt")
+os.system(command_to_copy)
 #registring the command or making alias
 os.system("c:\\Windows\\ComIt\\regAlias.reg")
