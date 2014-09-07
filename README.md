@@ -32,12 +32,15 @@ For setting environment variable open Windows Power-Shell and paste : [Environme
 
 now download [this]
 ```sh
-go to downloads and right click on "ComIt-master" and click on extract here
-open cmd as Admin
-paste it in cmd : cd %userprofile%\Downloads\ComIt-master\
-then run : python configWindows.py
+extract "ComIt-master"
+open cmd as "ADMIN" 
+run configWindows.py in cmd
+#in my case(or the file is extracted in Downloads\ComIt-master)
+#so i pasted it in cmd : cd %userprofile%\Downloads\ComIt-master\
+#and then run : python configWindows.py
 click on 'YES' when asked for adding Registry
 restart cmd(no need to open as Admin)
+#it's important to open cmd as admin and restart cmd
 
 ```
 
@@ -61,7 +64,7 @@ comit test.py input.text
 Version
 ----
 
-2.0
+2.1
 
 
 
