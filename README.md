@@ -52,7 +52,7 @@ comit 'Name of file containing code with location' 'Input File Name with locatio
 #Location is required if the file is in another folder
 #No need to provide input file name if there is no input
 ```
-for exapmle :
+for example :
 (in this example i'm writing all permutations of 12 and 123 in increasing order.) 
 ```sh
 Ctrl+Alt+t
